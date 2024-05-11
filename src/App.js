@@ -13,6 +13,10 @@ const generateDeck = () => {
   return deck.sort(() => Math.random() - 0.5);
 };
 
+const reloadPage = () => {
+  window.location.reload();
+};
+
 const Card = ({ card, onClick, highlightType }) => (
   <div
     onClick={() => onClick(card)}
@@ -122,6 +126,12 @@ function App() {
 
   return (
     <div className='flex flex-col w-full bg-gray-200 items-center h-screen justify-center relative'>
+      <div
+        className='btn btn-primary bg-gray-300 border  border-gray-600 px-4 py-2 rounded cursor-pointer hover:bg-gray-400'
+        onClick={() => reloadPage()}
+      >
+        Deal Again
+      </div>
       <h1>Player A's Cards</h1>
       <div style={{ display: 'flex', flexDirection: 'row' }}>
         {activePlayerHand.map((card) => (
