@@ -16,12 +16,9 @@ const reloadPage = () => {
 const Card = ({ card, onClick, highlightType, className }) => (
   <div
     onClick={() => onClick(card)}
-    className={` ${className} text-black  m-3 p-6 px-7 bg-gray-200 rounded-md flex flex-col text-center hover:shadow-md cursor-pointer hover:-translate-y-2 transition-all duration-100`}
-    style={{
-      backgroundColor: highlightType,
-    }}
+    className={` ${className} text-black  m-3 p-6 px-7 bg-white rounded-md flex flex-col text-center hover:shadow-md cursor-pointer hover:-translate-y-2 transition-all duration-100`}
   >
-    {card.value}{' '}
+    {card.value}
     <p
       className={`${
         card.suit === '♥' || card.suit === ':diamonds:' ? 'text-red-600' : ''
@@ -147,7 +144,7 @@ function App() {
                 onClick={handleCardClick}
                 className={
                   card == selectedCard
-                    ? 'bg-blue-200   shadow-md    -translate-y-2 border border-blue-300 '
+                    ? 'bg-green-300   shadow-md    -translate-y-2 border border-green-300 '
                     : 'bg-white'
                 }
                 // highlightType={}
