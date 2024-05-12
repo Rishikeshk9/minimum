@@ -116,12 +116,12 @@ function App() {
     const remainingCards = activePlayerHand.filter((card) => {
       return !selectedCards.includes(card);
     });
-    let newCard = deck.pop();
-    if (newCard) {
-      remainingCards.push(newCard);
-    } else {
-      console.log('Deck is empty, no more cards to draw.');
-    }
+    // let newCard = deck.pop();
+    // if (newCard) {
+    //   remainingCards.push(newCard);
+    // } else {
+    //   console.log('Deck is empty, no more cards to draw.');
+    // }
     setActivePlayerHand(remainingCards);
     setHighlightedPairs([]);
     setHighlightedSequences([]);
